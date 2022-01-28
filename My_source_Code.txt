@@ -82,6 +82,7 @@ def forgot_password():
                         """)
         print(Fore.RED+"\n\n\t\t\t\t\t\tPassword is too short!, Please try Again!\n\n\n\n\n")
         time.sleep(3)
+        clear()
         forgot_password()
     elif password != password2:
         clear()
@@ -98,6 +99,8 @@ def forgot_password():
 
                 """)
         print(Fore.RED+"\n\n\t\t\t\t\t\tPassword didn't matched!, Please try Again!\n\n\n\n\n")
+        clear()
+        signup()
     else:
         clear()
         database = open("database.txt", "a+")
@@ -460,6 +463,7 @@ def signup():
                     """)
                 print(Fore.RED+"\n\n\t\t\t\t\t\tThis username is already exist!\n\n\n\n\n")
                 time.sleep(3)
+                clear()
                 signup()
             else:
                 email = input(Fore.LIGHTMAGENTA_EX+"\t\t\t\t\tEmail Address: ")
